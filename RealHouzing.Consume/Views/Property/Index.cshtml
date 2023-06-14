@@ -1,0 +1,27 @@
+﻿@model List<PropertyListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.PropertyID</th>
+            <td>@item.PropertyTitle</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Property/DeleteProperty/@item.PropertyID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Property/UpdateProperty/@item.PropertyID" class="btn btn-outline-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Property/AddProperty/" class="btn btn-outline-success">Ekle</a>

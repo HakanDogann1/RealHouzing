@@ -1,0 +1,16 @@
+﻿@model AddContactMapViewModel
+@{
+    ViewData["Title"] = "AddContactMap";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>Lokasyon Adı:</label>
+    <input type="text" class="form-control" asp-for="ContactLocationName" />
+    <br />
+    <label>Lokasyon</label>
+    <input type="text" class="form-control" asp-for="ContactMapLocation" />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>

@@ -1,0 +1,27 @@
+﻿@model List<HeaderListViewModel>
+<section class="w3l-main-slider banner-slider" id="home">
+    <div class="owl-one owl-carousel owl-theme">
+        <div class="item">
+            <div class="slider-info banner-view banner-top1">
+                <div class="container">
+                    @foreach (var item in Model)
+                    {
+                        <div class="banner-info header-hero-19">
+                            <p class="w3hny-tag">@item.HeaderTitle1</p>
+                            <h3 class="title-hero-19">@item.HeaderTitle2</h3>
+                            <a href="about.html" class="btn btn-style btn-primary mt-4">
+                                Devamını oku <i class="fas fa-angle-double-right ms-2"></i>
+                            </a>
+
+                        </div>
+                    }
+                   
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</section>

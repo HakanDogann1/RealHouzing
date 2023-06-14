@@ -1,0 +1,34 @@
+﻿@model List<ContactChannelListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>İçerik</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ContactChannelID</th>
+            <td>@item.ContactChannelTitle</td>
+            <td>@item.ContactChannelDescription</td>
+            <td>@item.Icon</td>
+            <td><a href="/ContactChannel/DeleteContactChannel/@item.ContactChannelID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/ContactChannel/UpdateContactChannel/@item.ContactChannelID" class="btn btn-outline-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<br />
+<a href="/ContactChannel/AddContactChannel/" class="btn btn-outline-success">Ekle</a>
+
+
+

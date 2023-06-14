@@ -1,0 +1,47 @@
+﻿@model AddProductViewModel
+@{
+
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürün Ekle</title>
+</head>
+<body>
+    <form method="post">
+        <label>Başlık</label>
+        <input type="text" asp-for="ProductTitle" class="form-control"/>
+        <br />
+        <label>Fiyat</label>
+        <input type="text" asp-for="ProductPrice" class="form-control" />
+        <br />
+        <label>Tip</label>
+        <input type="text" asp-for="ProductType" class="form-control" />
+        <br />
+        <label>Adres</label>
+        <input type="text" asp-for="ProductAdress" class="form-control" />
+        <br />
+        <label>Yatak Odası Sayısı</label>
+        <input type="number" asp-for="BedRoomCount" class="form-control" />
+        <br />
+        <label>Banyo Sayısı</label>
+        <input type="number" asp-for="BathRoomCount" class="form-control" />
+        <br />
+        <label>Alan</label>
+        <input type="number" asp-for="Square" class="form-control" />
+        <br />
+        <label>Resim</label>
+        <input type="text" asp-for="CoverImageUrl" class="form-control" />
+        <br />
+        <label>Kategori</label>
+       @Html.DropDownListFor(x=>x.CategoryID , (List<SelectListItem>)ViewBag.list , new{@class="form-control"})
+        <br />
+        <button class="btn btn-success">Kaydet</button>
+    </form>
+</body>
+</html>

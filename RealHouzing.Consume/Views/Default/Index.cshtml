@@ -1,0 +1,57 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <!--/Header-->
+    @await Component.InvokeAsync("_HeaderPartial")
+    <!--//Header-->
+    <!--/Banner-Start-->
+    <!-- main-slider -->
+   @await Component.InvokeAsync("_MainSliderPartial")
+    <!-- //main-slider -->
+    <!--/w3l-properties-->
+    @await Component.InvokeAsync("_PropertiesPartial")
+    <!--/bottom-3-grids-->
+    @await Component.InvokeAsync("_Properties2Partial")
+    <!--//bottom-3-grids-->
+    <!--/grids-->
+    @await Component.InvokeAsync("_Properties3Partial")
+    <!--//grids-->
+    <!--/w3-grids-->
+    @await Component.InvokeAsync("_Properties4Partial")
+    <!--//w3-grids-->
+    <!-- features section -->
+    @await Component.InvokeAsync("_FeaturesPartial");
+    <!--//features section -->
+    <!--/properties-->
+   @await Component.InvokeAsync("_ProductPartial")
+    <!--//properties-->
+    <!--/w3l-join-main-->
+    @await Component.InvokeAsync("_JoinPartial")
+    <!--//w3l-join-main-->
+    <!--/testimonials-->
+    @await Component.InvokeAsync("_TestimonialsPartial")
+    <!--//testimonials-->
+    <!--/w3l-blog-->
+    @await Component.InvokeAsync("_BlogPartial")
+    <!--//w3l-blog-->
+    <!--/footer-9-->
+    @await Component.InvokeAsync("_FooterPartial")
+    <!--//footer-9 -->
+    <!-- Template JavaScript -->
+    @await Component.InvokeAsync("_ScriptPartial")
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+﻿@model UpdateHeaderViewModel
+@{
+    ViewData["Title"] = "UpdateHeader";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <input type="hidden" asp-for="HeaderID" />
+    <label>Başlık1:</label>
+    <input type="text" class="form-control" asp-for="HeaderTitle1" />
+    <br />
+    <label>Başlık2:</label>
+    <input type="text" class="form-control" asp-for="HeaderTitle2" />
+    <br />
+    <label>Resim:</label>
+    <input type="text" class="form-control" asp-for="ImageUrl" />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>

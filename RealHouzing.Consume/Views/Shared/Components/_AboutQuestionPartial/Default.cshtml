@@ -1,0 +1,48 @@
+﻿@model List<AboutQuestionListViewModel>
+@{
+    var id = "";
+    var dataBsTarget = "";
+}
+<div class="col-lg-6 faqw3-left">
+    <div class="accordion" id="accordionExample">
+
+        <div class="accordion-item">
+            @foreach (var item in Model)
+            {
+                if (item.AboutQuestionID == 1)
+                {
+                    id = "headingOne";
+                    dataBsTarget = "collapseOne";
+                }
+                else if (item.AboutQuestionID == 2)
+                {
+                    id = "headingTwo";
+                    dataBsTarget = "collapseTwo";
+                }
+               else  if (item.AboutQuestionID == 3)
+                {
+                    id = "headingThree";
+                    dataBsTarget = "collapseThree";
+                }
+                else if (item.AboutQuestionID == 4)
+                {
+                    id = "headingFourth";
+                    dataBsTarget = "collapseFourth";
+                }
+                <h4 class="accordion-header" id="@id">
+
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#@dataBsTarget" aria-expanded="true" aria-controls="@dataBsTarget">
+                       @item.AboutQuestionTitle
+                    </button>
+                </h4>
+                <div id="@dataBsTarget" class="accordion-collapse collapse show" aria-labelledby="@id" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        @item.AboutQuestionDescription
+                    </div>
+                </div>
+            }
+        </div>
+
+
+    </div>
+</div>

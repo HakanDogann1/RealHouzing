@@ -1,0 +1,52 @@
+﻿@model List<ProductListViewModel>
+@{
+
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürünler</title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Ürün Tipi</th>
+            <th>Adres</th>
+            <th>Yatak Odası</th>
+            <th>Banyo</th>
+            <th>Alan</th>
+            <th>Resim</th>
+            <th>Kategori</th>
+            <th>Fiyat</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.ProductTitle</td>
+                <td>@item.ProductType</td>
+                <td>@item.ProductAdress</td>
+                <td>@item.BathRoomCount</td>
+                <td>@item.BedRoomCount</td>
+                <td>@item.Square</td>
+                <td>@item.CoverImageUrl</td>
+                <td>@item.CategoryID</td>
+                <td>@item.ProductPrice</td>
+                <td><a href="/Product/DeleteProduct/@item.ProductID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Product/UpdateProduct/@item.ProductID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/Product/AddProduct/" class="btn btn-success">Ekle</a>
+</body>
+</html>

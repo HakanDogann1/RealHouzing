@@ -1,0 +1,19 @@
+﻿@model UpdatePropertyViewModel
+@{
+    ViewData["Title"] = "UpdateProperty";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="PropertyID"/>
+    <br />
+    <label>Başlık:</label>
+    <input type="text" class="form-control" asp-for="PropertyTitle" />
+    <br />
+    <label>Resim:</label>
+    <input type="text" class="form-control" asp-for="ImageUrl" />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>
+
+

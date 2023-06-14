@@ -1,0 +1,29 @@
+﻿@model List<Property3ListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>İçerik</th>
+        <th>Resim</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.Property3ID</th>
+            <td>@item.Property3Title</td>
+            <td>@item.Property3Description</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Property3/UpdateProperty3/@item.Property3ID" class="btn btn-outline-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<br />
+

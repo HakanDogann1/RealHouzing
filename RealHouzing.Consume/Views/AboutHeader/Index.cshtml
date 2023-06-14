@@ -1,0 +1,31 @@
+﻿@model List<AboutHeaderListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık 1</th>
+        <th>Başlık 2</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.AboutHeaderID</th>
+            <td>@item.AboutHeaderTitle1</td>
+            <td>@item.AboutHeaderTitle2</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/AboutHeader/DeleteAboutHeader/@item.AboutHeaderID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/AboutHeader/UpdateAboutHeader/@item.AboutHeaderID" class="btn btn-outline-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<br />
+<td><a href="/AboutHeader/AddAboutHeader/" class="btn btn-outline-success">Ekle</a></td>

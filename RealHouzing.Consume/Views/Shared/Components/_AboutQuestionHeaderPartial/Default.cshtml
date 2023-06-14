@@ -1,0 +1,15 @@
+﻿@model List<AboutQuestionHeaderListViewModel>
+@foreach (var item in Model)
+{
+    <div class="col-lg-6 faqw3-right pe-lg-5">
+    <div class="faqw3content text-left">
+        <h6 class="title-subw3hny mb-1 text-left">Sor  ???</h6>
+        <h3 class="title-w3l mb-2">@item.AboutQuestionHeaderTitle</h3>
+    </div>
+    <p class="mb-3">
+       @item.AboutQuestionHeaderDescription
+    </p>
+    <img src="@item.ImageUrl" alt="" class="img-fluid radius-image">
+
+</div>
+}

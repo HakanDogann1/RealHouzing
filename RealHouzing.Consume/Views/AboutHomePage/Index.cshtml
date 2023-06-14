@@ -1,0 +1,147 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <!--/Header-->
+    @await Component.InvokeAsync("_HeaderPartial")
+
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title mt-sm-5 mt-4">
+                           Hakkımızda </h2>
+
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Ana Sayfa</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> Hakkımızda</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <!--/w3l-index3-->
+    @await Component.InvokeAsync("_AboutPartial")
+    <!--//w3l-index3-->
+    <!--/w3-grids-->
+    @await Component.InvokeAsync("_AboutService1Partial")
+    <!--//w3-grids-->
+    <!--/progress-->
+    <section class="w3l-servicesblock w3l-servicesblock1 py-5" id="progress">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="row">
+                <div class="col-lg-6 mb-lg-0 mb-5 pe-lg-5">
+                    <h5 class="title-subw3hny mb-1">Progress Bars</h5>
+                    <h3 class="title-w3l">The Core Company Values Of
+                        Our main Goal</h3>
+                    <p class="mt-md-4 mt-3">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at. Lorem ipsum dolor sit amet
+                        elit. Non quae, fugiat nihil ad. Lorem ipsum dolor sit amet init.
+                    </p>
+
+                </div>
+                <div class="col-lg-6 align-self pe-lg-4">
+                    <div class="progress-info info1">
+                        <h6 class="progress-tittle">Modern Technology <span class="">70%</span></h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width:70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-info info2">
+                        <h6 class="progress-tittle">Tax Solution Area<span class="">80%</span>
+                        </h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width:80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-info info3">
+                        <h6 class="progress-tittle">Quick Support <span class="">90%</span></h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--//progress-->
+    <!--/faq-section-->
+    <div class="w3l-faq-block py-5" id="faq">
+        <div class="container content-gd py-lg-5">
+            <div class="row mt-3">
+                @await Component.InvokeAsync("_AboutQuestionHeaderPartial")
+               @await Component.InvokeAsync("_AboutQuestionPartial")
+
+            </div>
+        </div>
+    </div>
+    <!-- //faq-section -->
+    <!--/w3-grids-->
+    <section class="w3l-stats-section py-5" id="stats">
+        <div class="container py-md-4">
+            <div class="w3l-stats-inner-inf">
+                <div class="row stats-con">
+                    <div class="col-lg-3 col-6 stats_info counter_grid">
+                        <p class="counter">2500 </p>
+                        <h3>Completed Properties</h3>
+                    </div>
+                    <div class="col-lg-3 col-6 stats_info counter_grid">
+                        <p class="counter">1500 </p>
+                        <h3>Property Sales</h3>
+                    </div>
+                    <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-4">
+                        <p class="counter">1280 </p>
+                        <h3>Appartment Rent</h3>
+                    </div>
+                    <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-4">
+                        <p class="counter">3020</p>
+                        <h3>Happy Clients</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//w3-grids-->
+    <!--/w3l-subscribe-content-->
+   @await Component.InvokeAsync("_AboutHeaderPartial")
+    <!--//w3l-subscribe-content-->
+    <!--/team-sec-->
+   
+    <!--//team-sec-->
+    @await Component.InvokeAsync("_TeamPartial");
+
+       
+        @await Component.InvokeAsync("_FooterPartial")
+        <!--//footer-9 -->
+        <!-- Template JavaScript -->
+        @await Component.InvokeAsync("_ScriptPartial")
+
+</body>
+
+</html>
+

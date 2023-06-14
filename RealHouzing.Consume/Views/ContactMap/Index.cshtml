@@ -1,0 +1,34 @@
+﻿@model List<ContactMapListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Lokasyon Adı</th>
+        <th>Lokasyon</th>
+        <th>Statü</th>
+        <th>Aktif</th>
+        <th>Pasif</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ContactMapID</th>
+            <td>@item.ContactLocationName</td>
+            <td><a href="@item.ContactMapLocation" class="btn btn-outline-primary">Lokasyona Git</a></td>
+    
+            <td>@item.Status</td>
+            <td><a href="/ContactMap/AktifContactMap/@item.ContactMapID" class="btn btn-outline-success">Aktif Yap</a></td>
+            <td><a href="/ContactMap/PasifContactMap/@item.ContactMapID" class="btn btn-outline-danger">Pasif Yap</a></td>
+            <td><a href="/ContactMap/UpdateContactMap/@item.ContactMapID" class="btn btn-outline-warning">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<br />
+<a href="/ContactMap/AddContactMap/" class="btn btn-outline-success">Ekle</a>

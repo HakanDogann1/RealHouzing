@@ -1,0 +1,26 @@
+﻿@model UpdateAboutViewModel
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <input type="hidden" asp-for="AboutID" />
+    <label>Başlık:</label>
+    <input type="text" class="form-control" asp-for="NameSurname" />
+    <br />
+    <label>İçerik:</label>
+    <input type="text" class="form-control" asp-for="Position" />
+    <br />
+    <label>İçerik:</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <label>Resim:</label>
+    <input type="text" class="form-control" asp-for="ImageUrl" />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>
+
+
+
