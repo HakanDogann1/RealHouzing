@@ -15,17 +15,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<Context>();
+//builder.Services.AddDbContext<Context>();
+
+
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<RegisterErrorDescriber>();
 builder.Services.AddScoped<IHouzingRegisterDal, EfHouzingRegisterDal>();
 builder.Services.AddScoped<IHouzingRegisterService,HouzingRegisterManager>();
 builder.Services.AddHttpClient();
 builder.Services.AddMvc(config =>
 {
-	var policy = new AuthorizationPolicyBuilder()
-	.RequireAuthenticatedUser()
-	.Build();
-	config.Filters.Add(new AuthorizeFilter(policy));
+    var policy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
 });
 
 builder.Services.ConfigureApplicationCookie(_ =>
